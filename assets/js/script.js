@@ -17,5 +17,24 @@ In generale curare la parte di UI e organizzare i singoli membri in card/schede.
 BONUS 2:
 Inserire un form per l’aggiunta di un elemento alla lista.
 
+
+##Tools:
+ -const / let;
+ -array;
+ -getElementById / querySelector;
+ -for;
+ -append;
+ -innerText;
+ -addEventListener(click)
+
 */
 
+// creo una array contenente i nomi del mio team
+
+// creo la variabile collegata all'elemento HTML
+
+// con un ciclo for creo le card in pagina
+
+// inserisco i nomi degli utenti nelle card
+
+// creo un event listener su ogni card che modifica le classi
