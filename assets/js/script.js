@@ -30,19 +30,41 @@ Inserire un form per l’aggiunta di un elemento alla lista.
 */
 
 // creo una array contenente i nomi del mio team
-let teamList = ['Giovanni', 'Lucia', 'Marco', 'Federico', 'Jessika', 'Laura', 'Luca', 'Davide', 'Anna', 'Massimo'];
+let teamList = ['Giovanni', 'Lucia', 'Marco', 'Federico', 'Jessika', 'Laura', 'Luca', 'Davide', 'Anna', 'Massimo', 'Claudia', 'Giacomo'];
 
 // creo la variabile collegata all'elemento HTML
-let containerCard = document.getElementById('container');
+let containerCard = document.getElementById('row');
 
 // con un ciclo for creo le card in pagina
 for (let i = 0; i < teamList.length; i++) {
     const member = teamList[i];
+    
+    // creo i div che conterranno le informazioni degli utenti
     const card = document.createElement("div");
+
     // inserisco i nomi degli utenti nelle card
     card.innerText = member;
-    containerCard.appendChild(card);
+
+    // aggiungo la classe al div creato
+    card.classList.add('userCard');
+
+    // con append inserisco card nel nodo della dom
+    containerCard.append(card);
 }
 
+// creo una variabile che contenga la classe userCard
+let cards = document.getElementsByClassName('userCard');
 
-// creo un event listener su ogni card che modifica le classi
+// creo un event listener (su ogni card) che modifica le classi
+for (let card of cards) {
+    card.addEventListener('click', function () {
+        // se la card contiene la classe selectedCard   
+        if (card.classList.contains('selectedCard')) {
+            // rimuovi la classe selectedCard
+            card.classList.remove('selectedCard');
+        } else {
+            // Altrimenti, aggiungi la classe selectedCard
+            card.classList.add('selectedCard');
+        }
+    });
+}    
