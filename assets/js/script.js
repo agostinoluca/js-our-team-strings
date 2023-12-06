@@ -30,11 +30,16 @@ Inserire un form per l’aggiunta di un elemento alla lista.
 */
 
 // creo una array contenente i nomi del mio team
+let teamList = ['Giovanni', 'Lucia', 'Marco', 'Federico', 'Jessika', 'Laura', 'Luca', 'Davide', 'Anna', 'Massimo'];
 
 // creo la variabile collegata all'elemento HTML
+let containerCard = document.getElementById('container');
 
 // con un ciclo for creo le card in pagina
-
+for (let i = 0; i < teamList.length; i++) {
+    const member = teamList[i];
+    console.log(member);
+}
 // inserisco i nomi degli utenti nelle card
 
 // creo un event listener su ogni card che modifica le classi
