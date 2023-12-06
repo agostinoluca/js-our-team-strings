@@ -38,8 +38,11 @@ let containerCard = document.getElementById('container');
 // con un ciclo for creo le card in pagina
 for (let i = 0; i < teamList.length; i++) {
     const member = teamList[i];
-    console.log(member);
+    const card = document.createElement("div");
+    // inserisco i nomi degli utenti nelle card
+    card.innerText = member;
+    containerCard.appendChild(card);
 }
-// inserisco i nomi degli utenti nelle card
+
 
 // creo un event listener su ogni card che modifica le classi
