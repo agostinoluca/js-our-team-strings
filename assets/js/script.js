@@ -50,13 +50,8 @@ for (let i = 0; i < teamList.length; i++) {
 
     // con append inserisco card nel nodo della dom
     containerCard.append(card);
-}
 
-// creo una variabile che contenga la classe userCard
-let cards = document.getElementsByClassName('userCard');
-
-// creo un event listener (su ogni card) che modifica le classi
-for (let card of cards) {
+    // creo un event listener (su ogni card) che modifica le classi
     card.addEventListener('click', function () {
         // se la card contiene la classe selectedCard   
         if (card.classList.contains('selectedCard')) {
@@ -67,4 +62,26 @@ for (let card of cards) {
             card.classList.add('selectedCard');
         }
     });
-}    
+
+}
+
+
+
+
+
+// // creo una variabile che contenga la classe userCard
+// let cards = document.getElementsByClassName('userCard');
+
+// // creo un event listener (su ogni card) che modifica le classi
+// for (let card of cards) {
+//     card.addEventListener('click', function () {
+//         // se la card contiene la classe selectedCard   
+//         if (card.classList.contains('selectedCard')) {
+//             // rimuovi la classe selectedCard
+//             card.classList.remove('selectedCard');
+//         } else {
+//             // Altrimenti, aggiungi la classe selectedCard
+//             card.classList.add('selectedCard');
+//         }
+//     });
+// }    
